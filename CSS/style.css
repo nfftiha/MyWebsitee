@@ -1,0 +1,272 @@
+/* ===== Formal Minimalist Cute Theme ===== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Quicksand:wght@400;500;600&display=swap');
+
+/* Colors: change them here only */
+:root {
+  --bg: #fffbfc;
+  --pink: #ffe6ee;
+  --pink-deep: #f7bfd2;
+  --lavender: #f0e9fa;
+  --mint: #e4f6ee;
+  --peach: #fff3e8;
+  --text: #5f5266;
+  --heading: #8e6aa6;
+  --line: #f1e4ee;
+}
+
+/* ===== General ===== */
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  padding: 55px 10px 10px;
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 2.6em;
+  letter-spacing: 2px;
+  color: var(--heading);
+  margin: 0;
+}
+header p {
+  margin: 8px 0 0;
+  font-size: 0.85em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+header::after {
+  content: "\2661";              /* little heart divider */
+  display: block;
+  color: var(--pink-deep);
+  margin-top: 12px;
+  font-size: 1.1em;
+}
+
+/* ===== Navigation ===== */
+nav {
+  text-align: center;
+  background-color: white;
+  max-width: fit-content;
+  margin: 15px auto;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 40px;
+}
+nav a {
+  display: inline-block;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.85em;
+  letter-spacing: 1px;
+  padding: 6px 16px;
+  margin: 2px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+nav a:hover,
+nav a.active {
+  background-color: var(--pink);
+}
+
+/* ===== Main content ===== */
+main {
+  max-width: 780px;
+  margin: 30px auto;
+  padding: 35px 40px;
+  background-color: white;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: 0 10px 35px rgba(247, 191, 210, 0.2);
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  color: var(--heading);
+  text-align: center;
+  margin-top: 0;
+}
+h2::after {
+  content: "\2726  \2661  \2726";   /* sparkle heart sparkle */
+  display: block;
+  font-size: 0.5em;
+  letter-spacing: 6px;
+  color: var(--pink-deep);
+  margin-top: 4px;
+}
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  color: var(--heading);
+  margin-top: 35px;
+}
+
+/* ===== Home page: hero ===== */
+.hero {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--pink);
+  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--lavender);
+}
+.hero .tagline {
+  font-style: italic;
+  margin: 15px 0 0;
+}
+
+/* ===== Home page: clock ===== */
+.clock-box {
+  text-align: center;
+  background-color: var(--lavender);
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+.clock-box p {
+  margin: 2px 0;
+  font-size: 0.9em;
+}
+.greeting {
+  font-weight: 600;
+  color: var(--heading);
+}
+.clock {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8em !important;
+  font-weight: 500;
+}
+
+/* ===== Home page: quick link cards ===== */
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+.link-grid a {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  background-color: var(--peach);
+  border-radius: 18px;
+  padding: 15px 20px;
+  transition: all 0.3s;
+}
+.link-grid a:nth-child(3n+2) { background-color: var(--mint); }
+.link-grid a:nth-child(3n+3) { background-color: var(--pink); }
+.link-grid a:hover {
+  transform: translateY(-4px);
+}
+.link-grid strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  color: var(--heading);
+  font-size: 1.05em;
+}
+.link-grid span {
+  font-size: 0.85em;
+}
+
+/* ===== Tables ===== */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: 15px 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px dashed var(--line);
+}
+th {
+  background-color: var(--pink);
+  font-weight: 600;
+  width: 30%;
+}
+tr:last-child th,
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===== Lists ===== */
+ul, ol {
+  padding-left: 25px;
+}
+li {
+  margin-bottom: 8px;
+}
+ul li::marker {
+  content: "\2740  ";            /* flower marker */
+  color: var(--pink-deep);
+}
+ol li::marker {
+  color: var(--heading);
+  font-weight: 600;
+}
+
+/* ===== Images ===== */
+img {
+  max-width: 100%;
+  border-radius: 18px;
+}
+
+/* ===== Cards ===== */
+.card {
+  background-color: var(--peach);
+  border-radius: 18px;
+  padding: 15px 22px;
+  margin: 15px 0;
+}
+.card.mint { background-color: var(--mint); }
+.card.lavender { background-color: var(--lavender); }
+
+/* ===== Gallery grid ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+.gallery figure {
+  margin: 0;
+  text-align: center;
+  font-size: 0.85em;
+}
+
+/* ===== Links ===== */
+main a {
+  color: var(--heading);
+  font-weight: 500;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 0.8em;
+  margin-top: 40px;
+  background-color: var(--pink);
+  border-radius: 30px 30px 0 0;
+}
+footer p {
+  margin: 3px 0;
+}
+footer a {
+  color: var(--text);
+}
